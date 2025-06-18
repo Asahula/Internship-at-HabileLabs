@@ -1,0 +1,10 @@
+import random
+i = random.randint(0, 100)
+print(i)
+flag = True
+
+while flag:
+    x = int(input("Enter a random integer to guess: "))
+    if i==x:
+        flag = False
+        print("You've guessed the number")

@@ -1,0 +1,7 @@
+def isPalindrome(x):
+        X = str(x)
+        Y = X[::-1]
+
+        return X == Y
+n = input("Enter a word: ")
+print(isPalindrome(n))

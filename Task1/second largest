@@ -1,0 +1,14 @@
+def duplicates(nums):
+    nums.sort()
+    i=0
+    while i < len(nums)-1:
+        if nums[i]==nums[i+1]:
+            nums.pop(i)
+        else:
+            i = i+1
+    return(nums)
+def SecondLargest(l):
+    m = duplicates(l)
+    return(m[-2])
+l = list(map(int, input("Enter a list: ").split()))
+print(SecondLargest(l))

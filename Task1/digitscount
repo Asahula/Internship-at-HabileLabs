@@ -1,0 +1,4 @@
+def digitcount(x):
+    return(len(str(abs(x))))
+n = int(input("Enter a number: "))
+print(digitcount(n))
