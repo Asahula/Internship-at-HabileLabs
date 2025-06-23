@@ -1,0 +1,12 @@
+def Sum(n):
+    if n==0:
+        return(0)
+    return(n + Sum(n-1))
+try:
+    n = int(input("Enter a number: "))
+    if n<0:
+        print("Enter a positive integer in numerical form")
+    else:
+        print(Sum(n))
+except ValueError:
+    print("Enter a positive integer in numerical form")

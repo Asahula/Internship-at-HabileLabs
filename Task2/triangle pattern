@@ -1,0 +1,17 @@
+def right_tri(n):
+    for i in range(n + 1):
+        for j in range(i):
+            print("*", end='')
+        print()
+def iso_tri(n):
+    for i in range(n + 1):
+        print(" "*(n-i), end = '')
+        print("*"*(2*i - 1))
+try:
+    n = int(input("Enter a number: "))
+    if n<0:
+        print("Enter a positive integer in numerical form")
+    else:
+        print(iso_tri(n))
+except ValueError:
+    print("Enter a positive integer in numerical form")

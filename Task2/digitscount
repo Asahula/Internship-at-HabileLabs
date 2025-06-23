@@ -1,0 +1,8 @@
+def digitcount(x):
+    return(len(str(abs(x))))
+try:
+    n = int(input("Enter a number: "))
+except ValueError:
+    print("Enter an integer in numerical form")
+else:
+    print(digitcount(n))

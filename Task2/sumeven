@@ -1,0 +1,11 @@
+def sumeven(l):
+    sum = 0
+    for i in l:
+        if i%2==0:
+            sum = sum+i
+    return(sum)
+try:
+    l = list(map(int, input("Enter the list: ").split()))
+    print(sumeven(l))
+except ValueError:
+    print("Enter an integer list in numerical form")

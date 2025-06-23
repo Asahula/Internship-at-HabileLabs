@@ -1,0 +1,11 @@
+def isPalindrome(x):
+        X = str(x)
+        Y = X[::-1]
+
+        return X == Y
+n = str(input("Enter a word: "))
+
+if n.isalpha():
+        print(isPalindrome(n))
+else:
+        print("Enter an alphabetic string of one word") 

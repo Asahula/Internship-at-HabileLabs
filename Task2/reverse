@@ -1,0 +1,14 @@
+def reverse(x):
+    if x < 0:
+            y = str(x)[1:]  
+            z = int("-" + y[::-1])
+    else:
+        y = str(x)
+        z = int(y[::-1])        
+    return z
+try:
+     n = int(input("Enter a number: "))
+except ValueError:
+     print("Enter an integer in numerical form")
+else:
+     print(reverse(n))

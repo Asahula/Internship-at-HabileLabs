@@ -1,0 +1,30 @@
+def divisor(n):
+    x = []
+    l = []
+    for i in range(1, n+1):
+        if prime(i):
+            x.append(i)
+    for i in x:
+        if n%i==0:
+            l.append(i)
+    return(l)
+def prime(n):
+    flag =0 
+    if n<2:
+        return False
+    for i in range(2, n):
+        if n%i==0:
+            flag = 1
+            break 
+    if flag == 0:
+        return True
+    else:
+        return False
+try:
+    n = int(input("Enter a number: "))
+    if n<0:
+        print("Enter a positive integer")
+    else:
+        print(divisor(n))
+except ValueError:
+    print("Enter a positive integer")
