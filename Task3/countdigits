@@ -1,0 +1,14 @@
+def count_digits():
+    try:
+        user_input = input("Enter an integer: ")
+        n = int(user_input)
+        digit_count = len(str(abs(n)))
+        print(f"The number {n} has {digit_count} digit(s).")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    count_digits()

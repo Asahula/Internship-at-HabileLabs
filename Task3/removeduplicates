@@ -1,0 +1,18 @@
+def remove_duplicates():
+    try:
+        user_input = input("Enter numbers separated by spaces: ")
+        str_numbers = user_input.strip().split()
+        numbers = [float(num) for num in str_numbers]
+        unique_numbers = []
+        for num in numbers:
+            if num not in unique_numbers:
+                unique_numbers.append(num)
+        print(f"List after removing duplicates: {unique_numbers}")
+    except ValueError:
+        print("Invalid input. Please enter valid numbers separated by spaces.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    remove_duplicates()

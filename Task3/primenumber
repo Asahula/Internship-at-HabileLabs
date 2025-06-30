@@ -1,0 +1,20 @@
+def is_prime():
+    try:
+        user_input = input("Enter a positive integer: ")
+        n = int(user_input)
+        if n < 2:
+            print(f"{n} is not a prime number.")
+            return
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                print(f"{n} is not a prime number.")
+                return
+        print(f"{n} is a prime number.")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    is_prime()

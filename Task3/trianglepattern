@@ -1,0 +1,43 @@
+def print_triangle_pattern():
+    try:
+        user_input = input("Enter the number of rows (n): ")
+        n = int(user_input)
+        if n < 1:
+            print("Please enter a positive integer greater than 0.")
+            return
+        for i in range(1, n + 1):
+            print('*' * i)
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+def print_isosceles_triangle(n):
+    try:
+        if n < 1:
+            print("Please enter a positive integer greater than 0.")
+            return
+        for i in range(1, n + 1):
+            spaces = ' ' * (n - i)
+            stars = '*' * (2 * i - 1)
+            print(spaces + stars)
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+def main():
+    try:
+        choice = input("Choose triangle type (1: Right-angled, 2: Isosceles): ")
+        n = int(input("Enter the number of rows (n): "))
+        if choice == '1':
+            print_triangle_pattern()
+        elif choice == '2':
+            print_isosceles_triangle(n)
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+    except ValueError:
+        print("Invalid input. Please enter valid integers.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,17 @@
+def count_number_frequency():
+    try:
+        user_input = input("Enter numbers separated by spaces: ")
+        str_numbers = user_input.strip().split()
+        numbers = [float(num) for num in str_numbers]
+        x_input = input("Enter the number to count: ")
+        x = float(x_input)
+        count = numbers.count(x)
+        print(f"{x} appears {count} time(s) in the list.")
+    except ValueError:
+        print("Invalid input. Please enter valid numbers.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    count_number_frequency()

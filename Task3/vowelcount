@@ -1,0 +1,15 @@
+def count_vowels_in_word():
+    try:
+        word = input("Enter a word: ")
+        if not word.isalpha():
+            print("Please enter a valid word containing only letters.")
+            return
+        vowels = 'aeiouAEIOU'
+        count = sum(1 for char in word if char in vowels)
+        print(f"Number of vowels in '{word}': {count}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    count_vowels_in_word()

@@ -1,0 +1,17 @@
+def sum_of_n_numbers():
+    try:
+        user_input = input("Enter a positive integer n: ")
+        n = int(user_input)
+        if n < 1:
+            print("Please enter a positive integer greater than 0.")
+            return
+        total = sum(range(1, n + 1))
+        print(f"The sum of numbers from 1 to {n} is {total}.")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    sum_of_n_numbers()

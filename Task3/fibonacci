@@ -1,0 +1,21 @@
+def print_fibonacci_sequence():
+    try:
+        user_input = input("Enter how many Fibonacci numbers to print: ")
+        n = int(user_input)
+        if n < 1:
+            print("Please enter a positive integer greater than 0.")
+            return
+        fib_sequence = []
+        a, b = 0, 1
+        for _ in range(n):
+            fib_sequence.append(a)
+            a, b = b, a + b
+        print(f"First {n} Fibonacci numbers: {fib_sequence}")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    print_fibonacci_sequence()

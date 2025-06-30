@@ -1,0 +1,28 @@
+def is_even_or_odd(number):
+    """
+    Determines if the given number is even or odd.
+    Returns 'Even' or 'Odd'.
+    Raises ValueError if input is not an integer.
+    """
+    if not isinstance(number, int):
+        raise ValueError("Input must be an integer.")
+    return 'Even' if number % 2 == 0 else 'Odd'
+
+
+def get_user_input_and_check():
+    """
+    Abstraction layer to get user input, handle errors, and print result.
+    """
+    try:
+        user_input = input("Enter a number: ")
+        number = int(user_input)
+        result = is_even_or_odd(number)
+        print(f"{number} is {result}.")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+if __name__ == "__main__":
+    get_user_input_and_check()
